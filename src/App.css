@@ -1,0 +1,51 @@
+#components-layout-demo-top-side .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.ant-layout-content{
+  min-height: 75vh!important;
+  padding: 50px;
+}
+
+.ant-card-head-title {
+  font-size: large;
+  font-weight: bold;
+
+ 
+} 
+
+.ant-card-body .ant-card-head-title{
+  font-size: small;
+  font-weight:600 ;
+
+  }
+
+.ant-input-group-addon{
+  min-width: 60px;
+}
+
+.ant-card-body {
+  padding: 22px!important;
+}
+
+.header{
+  background-color: #00B4FF!important;
+  font-weight: bold;
+}
+
+.ant-layout {
+  border-radius: 0 10px 10px 0;
+}
