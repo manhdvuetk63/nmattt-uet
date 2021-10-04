@@ -20,7 +20,7 @@ const App = () => {
           <div className="mr-auto">
             <>NHẬP MÔN AN TOÀN THÔNG TIN</>
           </div>
-          <a className="text-white" href="https://github.com/nmattt-uet">
+          <a className="text-white" href="https://github.com/manhdvuetk63/nmattt-uet">
             Github / Source code
           </a>
         </Row>
