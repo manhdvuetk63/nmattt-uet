@@ -1,18 +1,16 @@
 import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { Layout, Menu, Breadcrumb, Row } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import "./App.css";
-import RSA from "./rsa/RSA";
-import ModuloCaculate from "./rsa/Modulo";
-import PrimitiveRootModulo from "./rsa/PrimitiveRootModulo";
-import DiffieHellman from "./rsa/DiffieHellman";
+import Caesar from "./encode/Caesar";
+import Substitution from "./encode/Substitution";
+import Affine from "./encode/Affine";
+import Vigenere from "./encode/Vigenere";
+import Hill from "./encode/Hill";
 
-const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 const App = () => {
-  const location = useLocation();
   return (
     <>
       <Header className="header text-white justify-content-between">
@@ -34,27 +32,26 @@ const App = () => {
           <Sider className="site-layout-background" width={300}>
             <Menu
               mode="inline"
-              defaultSelectedKeys={[location.pathname.split("/")[1] || "rsa-1"]}
-              defaultOpenKeys={["rsa"]}
+              defaultSelectedKeys={["caesar"]}
               style={{ height: "100%" }}
               onSelect={({ key }) => {
                 window.location.href = "/#/" + key;
               }}
             >
-              <SubMenu key="rsa" icon={<UserOutlined />} title="Hệ mật RSA">
-                <Menu.Item key="rsa-1">Xây dựng hệ mật RSA</Menu.Item>
-                <Menu.Item key="rsa-2">Tính mũ theo modulo</Menu.Item>
-                <Menu.Item key="rsa-3">Tính căn nguyên thủy</Menu.Item>
-                <Menu.Item key="rsa-4">Trao đổi khóa Diffie-Hellman</Menu.Item>
-              </SubMenu>
+                <Menu.Item key="caesar">Hệ mã dịch chuyển</Menu.Item>
+                <Menu.Item key="substitution">Hệ mật thay thế</Menu.Item>
+                <Menu.Item key="affine">Hệ mật Affine</Menu.Item>
+                <Menu.Item key="vigenere">Hệ mật Vigenere</Menu.Item>
+                <Menu.Item key="hill">Hệ mật mã Hill</Menu.Item>
             </Menu>
           </Sider>
           <Content style={{ padding: "30px", marginBottom: 30 }}>
             <Switch>
-              <Route path="/rsa-1" component={RSA} />
-              <Route path="/rsa-2" component={ModuloCaculate} />
-              <Route path="/rsa-3" component={PrimitiveRootModulo} />
-              <Route path="/rsa-4" component={DiffieHellman} />
+              <Route path="/caesar" component={Caesar} />
+              <Route path="/substitution" component={Substitution} />
+              <Route path="/affine" component={Affine} />
+              <Route path="/vigenere" component={Vigenere} />
+              <Route path="/hill" component={Hill} />
               <Route path="*" component={DefaultRedirect} />
             </Switch>
           </Content>
@@ -68,7 +65,7 @@ export default App;
 
 const DefaultRedirect: React.FC = () => {
   useEffect(() => {
-    window.location.href = "/#/rsa-1";
+    window.location.href = "/#/caesar";
   }, []);
   return <></>;
 };
