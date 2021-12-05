@@ -15,37 +15,61 @@
   background: #fff;
 }
 
-.ant-layout-content{
-  min-height: 75vh!important;
+.ant-layout-content {
+  min-height: 75vh !important;
   padding: 50px;
 }
 
 .ant-card-head-title {
   font-size: large;
   font-weight: bold;
+}
 
- 
-} 
-
-.ant-card-body .ant-card-head-title{
+.ant-card-body .ant-card-head-title {
   font-size: small;
-  font-weight:600 ;
+  font-weight: 600;
+}
 
-  }
-
-.ant-input-group-addon{
+.ant-input-group-addon {
   min-width: 60px;
 }
 
 .ant-card-body {
-  padding: 22px!important;
+  padding: 22px !important;
 }
 
-.header{
-  background-color: #00B4FF!important;
+.header {
+  background-color: #00b4ff !important;
   font-weight: bold;
 }
 
 .ant-layout {
   border-radius: 0 10px 10px 0;
+}
+.matrix {
+  position: relative;
+}
+.matrix td {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.matrix:before,
+.matrix:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 1px solid #000;
+  width: 6px;
+  height: 100%;
+}
+.matrix:before {
+  left: -6px;
+  border-right: 0;
+}
+.matrix:after {
+  right: -6px;
+  border-left: 0;
 }

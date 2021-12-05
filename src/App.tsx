@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Layout, Menu, Breadcrumb, Row } from "antd";
 import "./App.css";
 import Caesar from "./encode/Caesar";

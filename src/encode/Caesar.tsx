@@ -94,7 +94,7 @@ const Caesar = () => {
           type="number"
         />
         <hr />
-        <h4>Bản mã thu được: {decrypt()}</h4>
+        <h4>Bản rõ thu được: {decrypt()}</h4>
       </Space>
     </div>
   );
