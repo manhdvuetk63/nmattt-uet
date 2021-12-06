@@ -90,8 +90,7 @@ export function getColumnVectors(xdimgrams, dimensions) {
   return columnVectors;
 }
 
-export function getPremodMatrix(columnVectors, dimensions) {
-  var keyArray = window.sessionStorage.getObj("km");
+export function getPremodMatrix(columnVectors, dimensions, keyArray) {
   var premodArray = [];
   var kr0 = keyArray[0][0];
   var kr1 = keyArray[0][1];
