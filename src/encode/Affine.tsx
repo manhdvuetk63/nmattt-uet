@@ -81,7 +81,7 @@ const Affine = () => {
           placeholder="Nhập b"
           type="any"
         />
-        {!!keyDecodeA && !!keyDecodeB && (
+        {!!keyEncodeA && !!keyEncodeB && (
           <>
             <hr />
             <h5>
